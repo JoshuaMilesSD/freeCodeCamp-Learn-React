@@ -1,23 +1,15 @@
-const CurrentDate = (props) => {
-  return (
-    <div>
-      { /* Change code below this line */ }
-      <p>The current date is: </p>
-      { /* Change code above this line */ }
-    </div>
-  );
-};
-
-class Calendar extends React.Component {
+class MyComponent extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      name: 'freeCodeCamp'
+    }
   }
   render() {
     return (
       <div>
-        <h3>What date is it?</h3>
         { /* Change code below this line */ }
-        <CurrentDate />
+
         { /* Change code above this line */ }
       </div>
     );
