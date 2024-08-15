@@ -1,33 +1,30 @@
-class MyApp extends React.Component {
+class MyComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'CamperBot'
+      display: true
     }
+    this.toggleDisplay = this.toggleDisplay.bind(this);
+  }
+  toggleDisplay() {
+    this.setState((state) => ({
+      display: !state.display
+    }));
   }
   render() {
+    // Change code below this line
+if(this.state.display){
     return (
        <div>
-         {/* Change code below this line */}
-         <Navbar name={this.state.name} />
-         {/* Change code above this line */}
+         <button onClick={this.toggleDisplay}>Toggle Display</button>
+         <h1>Displayed!</h1>
        </div>
     );
-  }
-};
-
-class Navbar extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
+  }else {
     return (
-    <div>
-      {/* Change code below this line */}
-      <h1>Hello, my name is:{this.props.name} </h1>
-
-      {/* Change code above this line */}
-    </div>
+      <div>
+      <button onClick = {this.toggleDisplay}>Toggle Display </button>
+      </div>
     );
-  }
+  }}
 };
